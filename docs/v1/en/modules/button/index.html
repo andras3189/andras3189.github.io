@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Button - ESP32 Devices & Modules</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Button";
+        var mkdocs_page_input_path = "modules/button.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/cpp.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/json.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/bash.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> ESP32 Devices & Modules
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">How-to Guides</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../how-to/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../how-to/quick-start/">Quick start</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../how-to/factory-reset/">Factory reset</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../how-to/firmware-update/">Firmware update</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Devices</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../devices/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../devices/audio-player-v0/">Audio player v0</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../devices/audio-player-v1/">Audio player v1</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../devices/audio-player-v1s/">Audio player v1 S</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../devices/button-box-v1/">Button box v1</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../settings/">Settings</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Modules</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../general/">General</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../audio/">Audio</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../file-storage/">File storage</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../mqtt/">MQTT</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../rgb-led/">RGB LED</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../settings/">Settings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../sht40/">SHT40</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../time/">Time</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../wifi/">WiFi</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Button</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#supported-gestures">Supported Gestures</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#mqtt-interface">MQTT Interface</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#publications">Publications</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../button-matrix/">Button matrix</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../rotary-encoder/">Rotary encoder</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ryg-status-led/">RYG status LED</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../factory-reset/">Factory reset</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">ESP32 Devices & Modules</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Modules</li>
+      <li class="breadcrumb-item active">Button</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="button-module">Button Module<a class="headerlink" href="#button-module" title="Permanent link">&para;</a></h1>
+<p>The <strong>Button</strong> module handles debouncing, gesture recognition, and event publishing for directly connected physical momentary pushbuttons.</p>
+<hr />
+<h2 id="supported-gestures">Supported Gestures<a class="headerlink" href="#supported-gestures" title="Permanent link">&para;</a></h2>
+<ul>
+<li>The module recognizes three distinct user interaction gestures:<ul>
+<li><strong>Single Click (<code>click</code>):</strong> A standard, short press.</li>
+<li><strong>Double Click (<code>doubleClick</code>):</strong> Two consecutive presses in rapid succession.</li>
+<li><strong>Long Press (<code>longPressStart</code>):</strong> Continuous press held beyond the long-press threshold duration.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="mqtt-interface">MQTT Interface<a class="headerlink" href="#mqtt-interface" title="Permanent link">&para;</a></h2>
+<h3 id="publications">Publications<a class="headerlink" href="#publications" title="Permanent link">&para;</a></h3>
+<p>When a button gesture is detected, the event is immediately published:</p>
+<ul>
+<li><strong>Topic:</strong> <code>&lt;topic&gt;/status/button_&lt;index&gt;</code><ul>
+<li><code>&lt;index&gt;</code>: Button index (starting from <code>0</code>).</li>
+</ul>
+</li>
+<li><strong>Payload Options:</strong><ul>
+<li><code>click</code></li>
+<li><code>doubleClick</code></li>
+<li><code>longPressStart</code></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><strong>Example Payload for single click on button 0:</strong><ul>
+<li>Topic: <code>&lt;topic&gt;/status/button_0</code></li>
+<li>Payload: <code>click</code></li>
+</ul>
+</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../wifi/" class="btn btn-neutral float-left" title="WiFi"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../button-matrix/" class="btn btn-neutral float-right" title="Button matrix">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../wifi/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../button-matrix/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

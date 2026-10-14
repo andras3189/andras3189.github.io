@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="hu" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Settings - ESP32 Eszközök & Modulok</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Settings";
+        var mkdocs_page_input_path = "modules/settings.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/cpp.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/json.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/bash.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> ESP32 Eszközök & Modulok
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Kezdőlap</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">How-to Útmutatók</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../how-to/">Áttekintés</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../how-to/quick-start/">Quick start</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../how-to/factory-reset/">Factory reset</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../how-to/firmware-update/">Firmware update</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Eszközök</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../devices/">Összesítés</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../devices/audio-player-v0/">Audio player v0</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../devices/audio-player-v1/">Audio player v1</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../devices/audio-player-v1s/">Audio player v1 S</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../devices/button-box-v1/">Button box v1</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../settings/">Beállítások</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Modulok</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../">Összesítés</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../general/">General</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../audio/">Audio</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../file-storage/">File storage</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../mqtt/">MQTT</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../rgb-led/">RGB LED</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Settings</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#eleres">Elérés</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#modulbeallitasok-hivatkozasai">Modulbeállítások Hivatkozásai</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../sht40/">SHT40</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../time/">Time</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../wifi/">WiFi</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../gomb/">Gomb</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../gomb-matrix/">Gomb mátrix</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../rotary-encoder/">Rotary encoder</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ryg-status-led/">RYG status LED</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../factory-reset/">Factory reset</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">ESP32 Eszközök & Modulok</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Modulok</li>
+      <li class="breadcrumb-item active">Settings</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="settings-modul">Settings Modul<a class="headerlink" href="#settings-modul" title="Permanent link">&para;</a></h1>
+<p>A <strong>Settings</strong> modul egy beépített, aszinkron webszervert futtat az ESP32-n, amely biztosítja a teljes eszköz és az egyes modulok kényelmes böngészős konfigurálását, mentését a belső tárhelyre, valamint a firmware frissítési és factory reset felületek elérését.</p>
+<hr />
+<h2 id="eleres">Elérés<a class="headerlink" href="#eleres" title="Permanent link">&para;</a></h2>
+<p>A webszerver a helyi hálózaton keresztül érhető el az eszköz IP-címének megnyitásával:</p>
+<pre><code class="language-text">http://&lt;ESZKÖZ_IP&gt;
+</code></pre>
+<hr />
+<h2 id="modulbeallitasok-hivatkozasai">Modulbeállítások Hivatkozásai<a class="headerlink" href="#modulbeallitasok-hivatkozasai" title="Permanent link">&para;</a></h2>
+<p>A konfigurációs felületen megjelenő egyes beállítási mezők részletes leírása a megfelelő modulok dokumentációjában található:</p>
+<ul>
+<li><a href="../general/#beallitasok"><strong>General beállítások</strong></a>: Eszköz megjelenített neve, UI nyelve.</li>
+<li><a href="../audio/#beallitasok"><strong>Audio beállítások</strong></a>: Fájl és hálózati indítási pufferméretek (prebuffer).</li>
+<li><a href="../mqtt/#beallitasok"><strong>MQTT beállítások</strong></a>: Broker elérhetőség, SSL és CA tanúsítványok, topicok, pufferméretek.</li>
+<li><a href="../time/#beallitasok"><strong>Time beállítások</strong></a>: NTP időszerverek, POSIX időzóna, szinkronizálási intervallum.</li>
+<li><a href="../wifi/#beallitasok"><strong>WiFi beállítások</strong></a>: Wi-Fi hálózati adatok (SSID, jelszó).</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../rgb-led/" class="btn btn-neutral float-left" title="RGB LED"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../sht40/" class="btn btn-neutral float-right" title="SHT40">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../rgb-led/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../sht40/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

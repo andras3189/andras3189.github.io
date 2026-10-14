@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="hu" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>General - ESP32 Eszközök & Modulok</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "General";
+        var mkdocs_page_input_path = "modules/general.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/cpp.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/json.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/bash.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> ESP32 Eszközök & Modulok
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Kezdőlap</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">How-to Útmutatók</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../how-to/">Áttekintés</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../how-to/quick-start/">Quick start</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../how-to/factory-reset/">Factory reset</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../how-to/firmware-update/">Firmware update</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Eszközök</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../devices/">Összesítés</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../devices/audio-player-v0/">Audio player v0</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../devices/audio-player-v1/">Audio player v1</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../devices/audio-player-v1s/">Audio player v1 S</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../devices/button-box-v1/">Button box v1</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../settings/">Beállítások</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Modulok</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../">Összesítés</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">General</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#mukodes">Működés</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#mqtt-interfesz">MQTT Interfész</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#feliratkozasok-parancsok">Feliratkozások (Parancsok)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#publikalasok">Publikálások</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#statusz-uzenet">Státusz üzenet</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#telemetria-uzenet">Telemetria üzenet</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#beallitasok">Beállítások</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../audio/">Audio</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../file-storage/">File storage</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../mqtt/">MQTT</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../rgb-led/">RGB LED</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../settings/">Settings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../sht40/">SHT40</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../time/">Time</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../wifi/">WiFi</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../gomb/">Gomb</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../gomb-matrix/">Gomb mátrix</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../rotary-encoder/">Rotary encoder</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ryg-status-led/">RYG status LED</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../factory-reset/">Factory reset</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">ESP32 Eszközök & Modulok</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Modulok</li>
+      <li class="breadcrumb-item active">General</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="general-modul">General Modul<a class="headerlink" href="#general-modul" title="Permanent link">&para;</a></h1>
+<p>A <strong>General</strong> modul az eszköz központi felügyeletét látja el: státusz- és telemetria-információkat gyűjt az eszközön futó összes többi modultól, és továbbítja azokat MQTT-n keresztül.</p>
+<hr />
+<h2 id="mukodes">Működés<a class="headerlink" href="#mukodes" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Induláskor:</strong> Automatikusan státusz (<code>status</code>) és telemetria (<code>telemetry</code>) üzenetet küld az MQTT brokernek.</li>
+<li><strong>Periodikusan:</strong> A továbbiakban <strong>120 másodpercenként</strong> telemetria (<code>telemetry</code>) információt küld.</li>
+</ul>
+<hr />
+<h2 id="mqtt-interfesz">MQTT Interfész<a class="headerlink" href="#mqtt-interfesz" title="Permanent link">&para;</a></h2>
+<h3 id="feliratkozasok-parancsok">Feliratkozások (Parancsok)<a class="headerlink" href="#feliratkozasok-parancsok" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Topic:</strong> <code>&lt;topic&gt;/command</code></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parancs (üzenet)</th>
+<th style="text-align: left;">Leírás</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>status_update</code></td>
+<td style="text-align: left;">Azonnali állapotinformáció (<code>status</code>) küldése az eszközről.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>telemetry_update</code></td>
+<td style="text-align: left;">Azonnali telemetriai információ (<code>telemetry</code>) küldése az eszközről.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>restart</code></td>
+<td style="text-align: left;">Az eszköz szoftveres újraindítása.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="publikalasok">Publikálások<a class="headerlink" href="#publikalasok" title="Permanent link">&para;</a></h3>
+<h4 id="statusz-uzenet">Státusz üzenet<a class="headerlink" href="#statusz-uzenet" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Topic:</strong> <code>&lt;topic&gt;/status</code></li>
+</ul>
+<p>Az üzenet tartalmazza az ESP32 rendszerállapotát, valamint a többi aktív modul állapotát.</p>
+<ul>
+<li><code>esp.lastResetReason</code>: Az előző újraindulás hardveres/szoftveres oka.<ul>
+<li>Lehetséges értékek:<ul>
+<li><code>POWERON</code></li>
+<li><code>SOFTWARE</code></li>
+<li><code>PANIC</code></li>
+<li><code>INT_WDT</code></li>
+<li><code>TASK_WDT</code></li>
+<li><code>WDT</code></li>
+<li><code>DEEPSLEEP</code></li>
+<li><code>BROWNOUT</code></li>
+<li><code>SDIO</code></li>
+<li><code>UNKNOWN</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Példa üzenet:</strong></p>
+<pre><code class="language-json">{
+    &quot;esp&quot;: {
+        &quot;lastResetReason&quot;: &quot;SOFTWARE&quot;
+    }
+    // további modulok status mezői ide ágyazódnak be
+}
+</code></pre>
+<h4 id="telemetria-uzenet">Telemetria üzenet<a class="headerlink" href="#telemetria-uzenet" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Topic:</strong> <code>&lt;topic&gt;/telemetry</code></li>
+</ul>
+<p>Periodikus vagy kérésre küldött telemetriai adatok:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Mező</th>
+<th style="text-align: left;">Típus</th>
+<th style="text-align: left;">Leírás</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>uptime</code></td>
+<td style="text-align: left;">egész szám</td>
+<td style="text-align: left;">Az eszköz indulása óta eltelt idő ezredmásodpercben (ms).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>freeheap_percent</code></td>
+<td style="text-align: left;">egész szám</td>
+<td style="text-align: left;">Szabad dinamikus memória (heap) aránya százalékban (0–100%).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>temp_internal</code></td>
+<td style="text-align: left;">tizedes szám</td>
+<td style="text-align: left;">ESP32 belső chip hőmérséklete Celsius fokban (°C).</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Példa üzenet:</strong></p>
+<pre><code class="language-json">{
+    &quot;uptime&quot;: 83476,
+    &quot;freeheap_percent&quot;: 53,
+    &quot;temp_internal&quot;: 34.6
+    // további modulok telemetry mezői ide ágyazódnak be
+}
+</code></pre>
+<hr />
+<h2 id="beallitasok">Beállítások<a class="headerlink" href="#beallitasok" title="Permanent link">&para;</a></h2>
+<p>A General modul webes beállítási felületén az alábbi paraméterek adhatók meg:</p>
+<ul>
+<li><strong>Eszköz neve:</strong> Az eszköz egyedi, azonosításra szolgáló neve, amely a webes felhasználói felületen (UI) megjelenik.</li>
+<li><strong>Nyelv:</strong> A webes felület nyelve (támogatott: <strong>angol</strong> és <strong>magyar</strong>).</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../" class="btn btn-neutral float-left" title="Összesítés"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../audio/" class="btn btn-neutral float-right" title="Audio">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../audio/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

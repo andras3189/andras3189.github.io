@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Settings - ESP32 Devices & Modules</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Settings";
+        var mkdocs_page_input_path = "settings/index.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/cpp.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/json.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/bash.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> ESP32 Devices & Modules
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">How-to Guides</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../how-to/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../how-to/quick-start/">Quick start</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../how-to/factory-reset/">Factory reset</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../how-to/firmware-update/">Firmware update</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Devices</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../devices/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../devices/audio-player-v0/">Audio player v0</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../devices/audio-player-v1/">Audio player v1</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../devices/audio-player-v1s/">Audio player v1 S</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../devices/button-box-v1/">Button box v1</a>
+                  </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Settings</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#module-settings">Module Settings</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Modules</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../modules/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../modules/general/">General</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../modules/audio/">Audio</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../modules/file-storage/">File storage</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../modules/mqtt/">MQTT</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../modules/rgb-led/">RGB LED</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../modules/settings/">Settings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../modules/sht40/">SHT40</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../modules/time/">Time</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../modules/wifi/">WiFi</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../modules/button/">Button</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../modules/button-matrix/">Button matrix</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../modules/rotary-encoder/">Rotary encoder</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../modules/ryg-status-led/">RYG status LED</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../modules/factory-reset/">Factory reset</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">ESP32 Devices & Modules</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Settings</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="device-settings">Device Settings<a class="headerlink" href="#device-settings" title="Permanent link">&para;</a></h1>
+<p>The devices feature a built-in web portal for convenient network and module configuration directly from any web browser.</p>
+<p>The configuration interface is accessible over your local network at:</p>
+<pre><code class="language-text">http://&lt;DEVICE_IP&gt;
+</code></pre>
+<hr />
+<h2 id="module-settings">Module Settings<a class="headerlink" href="#module-settings" title="Permanent link">&para;</a></h2>
+<p>Settings are structured modularly. Follow the links below for the detailed parameters of each configurable module:</p>
+<ul>
+<li><a href="../modules/general/#settings"><strong>General Settings</strong></a>: Friendly device name displayed on UI, interface language (English / Hungarian).</li>
+<li><a href="../modules/wifi/#settings"><strong>WiFi Settings</strong></a>: Wi-Fi network SSID, password, and mesh access point roaming behavior.</li>
+<li><a href="../modules/mqtt/#settings"><strong>MQTT Settings</strong></a>: Broker IP/hostname, SSL flags and custom CA certificate, base and common topics, buffer sizes, keep-alive interval.</li>
+<li><a href="../modules/time/#settings"><strong>Time Settings</strong></a>: 3 configurable NTP servers, POSIX timezone string, NTP sync intervals.</li>
+<li><a href="../modules/audio/#settings"><strong>Audio Settings</strong></a>: Local flash file and network stream prebuffer threshold sizes.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../devices/button-box-v1/" class="btn btn-neutral float-left" title="Button box v1"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../modules/" class="btn btn-neutral float-right" title="Overview">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../devices/button-box-v1/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../modules/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

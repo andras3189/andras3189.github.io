@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="description" content="Documentation for ESP32 based smart home devices, modules, and MQTT API" />
+      <link rel="shortcut icon" href="img/favicon.ico" />
+    <title>ESP32 Devices & Modules</title>
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Home";
+        var mkdocs_page_input_path = "index.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/cpp.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/json.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/bash.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="." class="icon icon-home"> ESP32 Devices & Modules
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Home</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#main-sections">Main Sections</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#versioning-url-access">Versioning &amp; URL Access</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">How-to Guides</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="how-to/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="how-to/quick-start/">Quick start</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="how-to/factory-reset/">Factory reset</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="how-to/firmware-update/">Firmware update</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Devices</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="devices/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="devices/audio-player-v0/">Audio player v0</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="devices/audio-player-v1/">Audio player v1</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="devices/audio-player-v1s/">Audio player v1 S</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="devices/button-box-v1/">Button box v1</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="settings/">Settings</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Modules</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="modules/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="modules/general/">General</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="modules/audio/">Audio</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="modules/file-storage/">File storage</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="modules/mqtt/">MQTT</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="modules/rgb-led/">RGB LED</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="modules/settings/">Settings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="modules/sht40/">SHT40</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="modules/time/">Time</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="modules/wifi/">WiFi</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="modules/button/">Button</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="modules/button-matrix/">Button matrix</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="modules/rotary-encoder/">Rotary encoder</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="modules/ryg-status-led/">RYG status LED</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="modules/factory-reset/">Factory reset</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href=".">ESP32 Devices & Modules</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Home</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="esp32-devices-modules-documentation">ESP32 Devices &amp; Modules Documentation<a class="headerlink" href="#esp32-devices-modules-documentation" title="Permanent link">&para;</a></h1>
+<p>Welcome to the documentation for custom ESP32-based smart home devices and firmware modules.</p>
+<p>This documentation provides setup guides, hardware specifications, and detailed MQTT API references for integrating devices with Home Assistant and other smart home platforms.</p>
+<hr />
+<h2 id="main-sections">Main Sections<a class="headerlink" href="#main-sections" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="how-to/"><strong>How-to Guides</strong></a>: Step-by-step instructions for initial setup, Wi-Fi configuration, factory reset, and firmware updates.</li>
+<li><a href="devices/"><strong>Devices</strong></a>: Hardware specifications, power requirements, and module listings for all supported hardware models (Audio Player, Button Box).</li>
+<li><a href="settings/"><strong>Settings</strong></a>: Device configuration settings (work in progress).</li>
+<li><a href="modules/"><strong>Modules</strong></a>: Firmware modular components with detailed MQTT commands, status payloads, and telemetry specifications.</li>
+</ul>
+<hr />
+<h2 id="versioning-url-access">Versioning &amp; URL Access<a class="headerlink" href="#versioning-url-access" title="Permanent link">&para;</a></h2>
+<p>This documentation is deployed to GitHub Pages under a versioned path (<code>.../v1/...</code>). Major MQTT API revisions will introduce newer version paths.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="how-to/" class="btn btn-neutral float-right" title="Overview">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+      <span><a href="how-to/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = ".";</script>
+    <script src="js/theme_extra.js"></script>
+    <script src="js/theme.js"></script>
+      <script src="search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
+
+<!--
+MkDocs version : 1.6.1
+Build Date UTC : 2026-10-14 23:16:01.524402+00:00
+-->

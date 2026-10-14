@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="hu" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Quick start - ESP32 Eszközök & Modulok</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Quick start";
+        var mkdocs_page_input_path = "how-to/quick-start.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/cpp.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/json.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/bash.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> ESP32 Eszközök & Modulok
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Kezdőlap</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">How-to Útmutatók</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../">Áttekintés</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Quick start</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#1-csatlakozas-a-beallitasi-wi-fi-hez">1. Csatlakozás a beállítási Wi-Fi-hez</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2-wi-fi-konfiguracio">2. Wi-Fi konfiguráció</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#3-sikertelen-csatlakozas-ap-mod-kenyszeritese">3. Sikertelen csatlakozás: AP mód kényszerítése</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../factory-reset/">Factory reset</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../firmware-update/">Firmware update</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Eszközök</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../devices/">Összesítés</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../devices/audio-player-v0/">Audio player v0</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../devices/audio-player-v1/">Audio player v1</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../devices/audio-player-v1s/">Audio player v1 S</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../devices/button-box-v1/">Button box v1</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../settings/">Beállítások</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Modulok</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/">Összesítés</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/general/">General</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/audio/">Audio</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/file-storage/">File storage</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/mqtt/">MQTT</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/rgb-led/">RGB LED</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/settings/">Settings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/sht40/">SHT40</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/time/">Time</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/wifi/">WiFi</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/gomb/">Gomb</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/gomb-matrix/">Gomb mátrix</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/rotary-encoder/">Rotary encoder</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/ryg-status-led/">RYG status LED</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../modules/factory-reset/">Factory reset</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">ESP32 Eszközök & Modulok</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">How-to Útmutatók</li>
+      <li class="breadcrumb-item active">Quick start</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="quick-start-gyors-beuzemeles">Quick Start (Gyors beüzemelés)<a class="headerlink" href="#quick-start-gyors-beuzemeles" title="Permanent link">&para;</a></h1>
+<p>A legfontosabb lépések az eszköz első beüzemeléséhez és a helyi Wi-Fi hálózatra való felkapcsolásához.</p>
+<hr />
+<h2 id="1-csatlakozas-a-beallitasi-wi-fi-hez">1. Csatlakozás a beállítási Wi-Fi-hez<a class="headerlink" href="#1-csatlakozas-a-beallitasi-wi-fi-hez" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Kapcsold be az eszközt.</li>
+<li>Keress a telefonoddal vagy számítógépeddel Wi-Fi hálózatokat, és csatlakozz az <code>ESP32_AP_...</code> kezdetű hozzáférési ponthoz (AP).</li>
+<li>A böngészőben nyisd meg az eszköz konfigurációs felületét (általában automatikusan felugrik a captive portal, vagy nyisd meg a böngészőben a megadott címet).</li>
+</ol>
+<hr />
+<h2 id="2-wi-fi-konfiguracio">2. Wi-Fi konfiguráció<a class="headerlink" href="#2-wi-fi-konfiguracio" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Add meg az otthoni Wi-Fi hálózatod <strong>SSID</strong>-jét és <strong>jelszavát</strong>.</li>
+<li>Kattints a <strong>Save</strong> gombra.</li>
+<li>Mentés után az eszköz automatikusan újraindul, és megpróbál felcsatlakozni a megadott Wi-Fi hálózatra.</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Statikus IP javaslat</p>
+<p>A routeredben érdemes <strong>statikus IP-címet (DHCP reservation)</strong> rendelni az eszköz MAC címéhez a stabil elérhetőség és integráció érdekében.</p>
+</div>
+<hr />
+<h2 id="3-sikertelen-csatlakozas-ap-mod-kenyszeritese">3. Sikertelen csatlakozás: AP mód kényszerítése<a class="headerlink" href="#3-sikertelen-csatlakozas-ap-mod-kenyszeritese" title="Permanent link">&para;</a></h2>
+<p>Amennyiben az eszköz nem tud csatlakozni a Wi-Fi hálózathoz, az alábbi lépésekkel újra konfigurációs (AP) módba állítható:</p>
+<ol>
+<li>Húzd ki az áramellátást.</li>
+<li>Nyomd le és tartsd lenyomva a beállító gombot (Button box esetén: 1. sor 1. oszlop gombja).</li>
+<li>Dugd vissza az áramellátást (a gombot továbbra is nyomva tartva).</li>
+<li>Várj <strong>2 másodpercet</strong>, majd engedd el a gombot.</li>
+<li>Az eszköz újra AP módban fog futni (<code>ESP32_AP_...</code>).</li>
+</ol>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../" class="btn btn-neutral float-left" title="Áttekintés"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../factory-reset/" class="btn btn-neutral float-right" title="Factory reset">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../factory-reset/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
